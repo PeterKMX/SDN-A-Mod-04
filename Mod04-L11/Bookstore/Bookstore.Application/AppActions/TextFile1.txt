@@ -1,0 +1,44 @@
+﻿public interface IActionService
+{
+    void OnAddBook();
+    void OnReadBookDetails();
+}
+
+public void OnUserAction(int i)
+{
+   IActionService _iActionService = new ActionServiceImpl();
+
+   switch (i)
+   {
+      case 1:_iActionService.OnAddBook(); break;
+      case 2:_iActionService.OnReadBookDetails(); break;
+      default:throw new Exception("Error: unknown action");
+   }
+}
+
+public void OnUserAction(int i)
+{
+    IActionService _iActionService = new ActionServiceImpl();
+
+    var result = i switch
+    {
+        1 => _iActionService.OnAddBook(),
+        2 => _iActionService.OnReadBookDetails(),
+        _ => throw new Exception("Error: unknown action")
+    };
+
+    // You can optionally use the result if necessary,
+    // but it's not required as Void methods don't return values.
+}
+
+================================================================
+var operation = 2;
+
+var result = operation switch
+{
+    1 => "Case 1",
+    2 => "Case 2",
+    3 => "Case 3",
+    4 => "Case 4",
+};
+

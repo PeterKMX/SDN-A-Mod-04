@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyVersion>4.2.6.24</AssemblyVersion>
+    <FileVersion>4.2.6.24</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AppMenu\MenuManager.cs~RFc1e6d8e.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bookstore.Domain\Bookstore.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
