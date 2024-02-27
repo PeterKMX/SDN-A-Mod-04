@@ -136,10 +136,5 @@ namespace Bookstore.Domain.Services
       int newId = highestCurrendtId + 1;
       return newId;
     }
-
-    public int GetItemId(T t)
-    {
-      throw new NotImplementedException();
-    }
   }
 }

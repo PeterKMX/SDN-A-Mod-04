@@ -16,6 +16,5 @@ namespace Bookstore.Domain.Interfaces
     public List<int> GetIdList();
     public bool RepositoryIsEmpty();
     public T FindItemById(int bookId);
-    public int GetItemId(T t);
   }
 }
